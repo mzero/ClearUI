@@ -10,8 +10,13 @@
 #define DIGIT_WIDTH 9
 #define DIGIT_HEIGHT 12
 
+#ifdef RPI
+#define DISPLAY_WIDTH 128
+#define DISPLAY_HEIGHT 64
+#else
 #define DISPLAY_WIDTH 128
 #define DISPLAY_HEIGHT 32
+#endif
 
 Adafruit_SSD1306 display =
   Adafruit_SSD1306(DISPLAY_WIDTH, DISPLAY_HEIGHT, &Wire);
